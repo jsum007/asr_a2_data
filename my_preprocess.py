@@ -67,7 +67,7 @@ birth_year_dict = user_profile_df['birth'].to_dict()
 birth_year_dict
 
 # add user's age as feature
-all_features_df['age'] = [age_convert(birth_year.get(int(u), None)) for u in all_features_df['username']]
+all_features_df['age'] = [age_convert(birth_year_dict.get(int(u), None)) for u in all_features_df['username']]
 
 all_features_df.head()
 
